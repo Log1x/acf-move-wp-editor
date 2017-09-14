@@ -14,3 +14,28 @@ Install ACF Move WP Editor using Composer:
 ```
 $ composer require log1x/move-wp-editor:dev-master
 ```
+
+## Recommended Filters
+The filters below remove the TinyMCE editor feature that expands its container to the height of the content as well as removes the option from the Help menu.
+
+```php
+/**
+ * Unregister the editor expand script.
+ *
+ * @return void
+ */
+add_action('admin_init', function () {
+    wp_deregister_script('editor-expand');
+});
+
+/**
+ * Disable TinyMCE's autoresize.
+ *
+ * @param  array $init
+ * @return array
+ */
+add_filter('tiny_mce_before_init', function ($init) {
+    unset($init['wp_autoresize_on']);
+    return $init;
+});
+```
