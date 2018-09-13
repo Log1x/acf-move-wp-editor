@@ -12,7 +12,7 @@ This can be useful for cleaning up your Edit Post screen with something like ACF
 Install ACF Move WP Editor using Composer:
 
 ```
-$ composer require log1x/move-wp-editor:dev-master
+$ composer require log1x/acf-move-wp-editor
 ```
 
 ## Recommended Filters
