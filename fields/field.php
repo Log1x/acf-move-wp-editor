@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * ExampleField
+ * WP Editor Field
  */
 if (!class_exists('WPEditorField')) {
     class WPEditorField extends \acf_field

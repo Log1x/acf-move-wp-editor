@@ -1,4 +1,4 @@
-const mix            = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,14 +12,14 @@ const mix            = require('laravel-mix');
  */
 
 const resources = 'resources';
-const assets    = `${resources}/assets`;
-const dist      = 'dist';
+const assets = `${resources}/assets`;
+const dist = 'dist';
 
 mix.setPublicPath(dist);
 mix.setResourceRoot('../');
 
 // Stylus
-mix.stylus(`${assets}/styles/main.styl`, `${dist}/styles/main.css`);
+mix.sass(`${assets}/styles/main.scss`, `${dist}/styles/main.css`);
 
 // Javascript
 mix.js(`${assets}/scripts/main.js`, `${dist}/scripts`);
